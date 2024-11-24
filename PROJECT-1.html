@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Interface</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #63b4e7;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background-color: rgb(238, 236, 237);
+      padding: none;
+      border-radius: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Dropdown Styles */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown select {
+      border: none;
+      background-color: rgb(10, 8, 8);
+      color: rgb(253, 247, 247);
+      padding: 15px 30px;
+      border-radius: 20px;
+      font-size: 16px;
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none; /* For Safari */
+    }
+
+    .dropdown::after {
+      content: '\25BC';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: white;
+    }
+
+    /* Search Input Styles */
+    .search-input {
+      border: 1px solid #e4e4e4;
+      border-radius: 30px;
+      padding: 14px 15px;
+      margin-left: none;
+      width: 300px;
+      outline: none;
+    }
+
+    /* Button Styles */
+    button {
+      margin-left:5px;
+      padding: 3px 9px;
+      background-color: rgb(243, 233, 233);
+      color: rgb(104, 15, 15);
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: rgb(244, 234, 234);
+    }
+
+    button i {
+      margin-left: 1%;
+
+ }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+</head>
+<body>
+<div class="search-container">
+  <!-- Dropdown -->
+  <div class="dropdown">
+    <select>
+      <option>Everything</option>
+      <option>Software Development</option>
+      <option>Web Development</option>
+      <option>Data Analyst</option>
+      <option>IT Consultant</option>
+      <option>Network Administrator</option>
+    </select>
+  </div>
+  <!-- Search Input -->
+  <input type="text" class="search-input" placeholder="Search Anything">
+  <!-- Submit Button -->
+  <button type="submit">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+</div>
+</body>
+</html>
